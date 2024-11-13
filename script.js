@@ -6,18 +6,27 @@ console.log(`Hai` + ` ` + age + ` ` + `anni` )
 
 const kmPrice = 0.21;
 
-let ticketPrice = (km * kmPrice)
+let ticketPrice = km * kmPrice;
+
+let discount = 0;
+
+let discountPercentage = 0; 
 
 if (age < 18){
-  (ticketPrice / 100 * 20)
-  console.log(`Dato che hai` + ` ` + age + ` ` + `anni viene applicato uno sconto del 20%`)
-  ticketPrice.toFixed(2)
+
+  discount = (ticketPrice / 100 * 20);
+  discountPercentage = 20
+  
+} else if (age > 65){
+  
+  discount = (ticketPrice / 100 * 40);
+  discountPercentage = 40
+
 }
 
-if (age > 65){
-  (ticketPrice / 100 * 40)
-  console.log(`Dato che hai` + ` ` + age + ` ` + `anni viene applicato uno sconto del 40%`)
-}
+ticketPrice = ticketPrice - discount
 
-console.log(`Il prezzo del biglietto è' di` + ` ` + ticketPrice + ` ` + `euro`)
+console.log(`Dato che hai` + ` ` + age + ` ` + `anni viene applicato uno sconto del` + ` ` + discountPercentage + `%`)
+
+console.log(`Il prezzo del biglietto è' di` + ` ` + ticketPrice.toFixed(2) + ` ` + `euro`)
 
