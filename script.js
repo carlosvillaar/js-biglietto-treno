@@ -19,5 +19,5 @@ if (age > 65){
   console.log(`Dato che hai` + ` ` + age + ` ` + `anni viene applicato uno sconto del 40%`)
 }
 
-console.log(`Il prezzo del biglietto e/' di` + ` ` + ticketPrice + ` ` + `euro`)
+console.log(`Il prezzo del biglietto è' di` + ` ` + ticketPrice + ` ` + `euro`)
 
